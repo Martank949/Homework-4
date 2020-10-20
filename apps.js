@@ -63,3 +63,28 @@ var questions = [{
     c: "None of the above",
     answer: "B"
 }];
+
+function get(x) {
+    return document.getElementById(x);
+}
+//render question function 
+function renderQuestion() {
+    if (locationInTest >= questions.length) {
+        test.innerHTML = "<h2>You got " + correct + " out of " + questions.length + " questions correct</h2>";
+        get("testLocator").innerHTML = "Test completed";
+        locationInTest = 0;
+        correct = 0;
+        return false;
+    }
+    get("testLocator").innerHTML = "Question " + (locationInTest + 1) + " of " + questions.length;
+
+    question = questions[locationInTest].question;
+    choiceA = questions[locationInTest].a;
+    choiceB = questions[locationInTest].b;
+    choiceC = questions[locationInTest].c;
+    test.innerHTML = "<h3>" + question + "</h3>";
+    test.innerHTML += "<label> <input type='radio' name='choices' value='A'> " + choiceA + "</label><br>";
+    test.innerHTML += "<label> <input type='radio' name='choices' value='B'> " + choiceB + "</label><br>";
+    test.innerHTML += "<label> <input type='radio' name='choices' value='C'> " + choiceC + "</label><br><br>";
+    test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
