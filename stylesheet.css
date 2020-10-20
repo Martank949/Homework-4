@@ -1,29 +1,17 @@
 .question {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .progressBar {}
 
-.answers label {
+. {
     display: block;
-}
-
-#text {
-    font-family: sans-serif;
-    font-size: 20px;
-    background-color: #279;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-#submit:hover {
-    background-color: #38a;
 }
 
 .container {
     text-align: center;
+}
+
+.container-left {
+    text-align: left;
 }
