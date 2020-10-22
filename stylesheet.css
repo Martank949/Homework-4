@@ -4,14 +4,14 @@
 
 .progressBar {}
 
-. {
-    display: block;
-}
-
 .container {
     text-align: center;
 }
 
 .container-left {
     text-align: left;
+}
+
+.hidden {
+    display: none;
 }
